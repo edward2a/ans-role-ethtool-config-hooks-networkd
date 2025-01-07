@@ -1,0 +1,16 @@
+galaxy_info:
+  author: Eduardo A. Paris Penas
+  description: your role description
+  company: Real ReadMe Limited
+  license: MIT
+  min_ansible_version: 2.1
+  platforms:
+  - name: Ubuntu
+    versions:
+    - 24.04
+
+  galaxy_tags:
+  - networkd
+  - ethtool
+
+dependencies: []
