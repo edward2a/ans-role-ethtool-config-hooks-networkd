@@ -1,0 +1,25 @@
+---
+argument_specs:
+  main:
+    options:
+      interface_name:
+        type: str
+        description: The interface to configure on the hook (like eth0)
+        required: true
+      hook:
+        type: str
+        description: The networkd-dispatcher hook to configure (like configuring.d)
+        required: true
+        choices:
+        - no-carrier.d
+        - dormant.d
+        - carrier.d
+        - configuring.d
+        - degraded.d
+        - routable.d
+        - configured.d
+        - off.d
+      features:
+        type: "dict"
+        description: The list of ethtool features to enable or disable (like tx-udp_tnl-csum-segmentation)
+        required: true
