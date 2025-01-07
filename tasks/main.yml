@@ -1,2 +1,11 @@
 ---
-# tasks file for ethtool-config-hooks-networkd
+name: Hooks directory
+  ansible.builtin.file:
+    dest: "/etc/networkd-dispatcher/{{ hook }}"
+    state: directory
+
+name: Add hooks
+  ansible.builtin.template:
+    template: templates/ethtool-hook.sh.j2
+    dest: "/etc/networkd-dispatcher/{{ hook }}/99-ethtool-{{ interface_name }}-{{ item }}"
+  loop: "{{ interface_features }}"
