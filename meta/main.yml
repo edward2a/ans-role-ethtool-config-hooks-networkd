@@ -3,7 +3,7 @@ galaxy_info:
   description: your role description
   company: Real ReadMe Limited
   license: MIT
-  min_ansible_version: 2.1
+  min_ansible_version: 2.11
   platforms:
   - name: Ubuntu
     versions:
